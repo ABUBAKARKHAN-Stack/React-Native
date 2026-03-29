@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Task } from '@/types/tasks.types'
 import Colors from '@/constants/colors'
 import { Ionicons } from '@expo/vector-icons'
+import { useRouter } from 'expo-router'
 
 const STATUS_COLOR = {
     "Done": Colors.statusDone,
@@ -15,9 +16,11 @@ type TaskCardProps = { task: Task }
 const TaskCard = ({
     task
 }: TaskCardProps) => {
+    const router = useRouter()
     return (
-        <View
+        <TouchableOpacity
             style={styles.card}
+            onPress={() => router.push(`/task/${task.id}`)}
         >
             <View style={styles.content}>
                 <Text style={styles.category}>
@@ -48,7 +51,7 @@ const TaskCard = ({
             >
                 <Ionicons name={task.icon.name as any} color={Colors.textPrimary} size={20} />
             </View>
-        </View>
+        </TouchableOpacity>
 
 
     )
