@@ -1,21 +1,23 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
- 
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+import { styled } from 'nativewind'
+
+const SafeAreaView = styled(RNSafeAreaView)
+
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-background">
-      <Text className="text-2xl font-bold text-center text-primary">
-        Welcome to React Native With Tailwind CSS!
-      </Text>
-      <Link href={'/onboarding'} className="text-accent underline">
-      Go to Onboarding
+    <SafeAreaView className="flex-1 items-center justify-center bg-background">
+
+      <Link href='/subscriptions/spotify' className="text-accent underline">
+        Subscribe to spotify
       </Link>
-       <Link href='/(auth)/sign-in' className="text-accent underline">
-      Go to Sign In
+
+      <Link href={{
+        pathname: '/subscriptions/[id]',
+        params: { id: "ChatGpt" }
+      }} className="text-accent underline">
+        Subscribe to ChatGpt
       </Link>
-        <Link href='/(auth)/sign-up' className="text-accent underline">
-      Go to Sign Up
-      </Link>
-    </View>
+    </SafeAreaView>
   );
 }
