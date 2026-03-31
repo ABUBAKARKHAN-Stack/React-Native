@@ -21,11 +21,11 @@ const TabLayout = () => {
                     bottom: Math.max(insets.bottom, tabBar.horizontalInset),
                     height: tabBar.height,
                     marginHorizontal: tabBar.horizontalInset,
-                    borderRadius: tabBar.radius,
+                    borderRadius: 999,
                     backgroundColor: colors.primary,
                     borderTopWidth: 0,
                 },
-
+                tabBarPosition: "bottom"
             }}
 
         >
@@ -38,7 +38,6 @@ const TabLayout = () => {
                         options={{
                             tabBarIcon(props) {
                                 return (
-
                                     <View
                                         className={
                                             cn(

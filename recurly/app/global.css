@@ -1,8 +1,9 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css";
- 
-@import "nativewind/theme";@import "tailwindcss/theme.css" layer(theme);
+
+@import "nativewind/theme";
+@import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css";
 
@@ -20,6 +21,13 @@
     --color-success: #16a34a;
     --color-destructive: #dc2626;
     --color-subscription: #8fd1bd;
+
+    --font-sans-light: "sans-light";
+    --font-sans: "sans-regular";
+    --font-sans-medium: "sans-medium";
+    --font-sans-semibold: "sans-semibold";
+    --font-sans-bold: "sans-bold";
+    --font-sans-extrabold: "sans-extrabold";
 
     --spacing-0: 0px;
     --spacing-1: 4px;
