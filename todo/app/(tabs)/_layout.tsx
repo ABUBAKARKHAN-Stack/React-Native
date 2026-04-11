@@ -4,7 +4,9 @@ import { Colors } from "@/constants/theme"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const TabLayout = () => {
+
     const insets = useSafeAreaInsets()
+    
     return (
         <Tabs
             screenOptions={{
